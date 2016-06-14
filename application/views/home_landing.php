@@ -4,7 +4,7 @@
 		<link href='favicon.ico' rel='icon' type='image/x-icon'/>
 		
 		<link rel="stylesheet" href="assets/stylesheets/styles.css">
-		<link rel="stylesheet" href="assets/stylesheets/github-light.css">
+		<script type="text/javascript" src="assets/javascripts/pace.min.js"></script>
 		<meta name="viewport" content="width=device-width">
 	
 	</head>
@@ -19,23 +19,39 @@
 		</header>
 		<section>
 			<div id="main">
-				<span style="font-family:courier new,courier,monospace;">
+			<?php if ($this->uri->segment(2) == "post") { ?>
+				<div class="blogmain">
 					<?php
-						$query = $this->db->query("select * from posts");
-
 						foreach ($query->result_array() as $row)
 						{
+								echo '<div class="perpos">';
 								$img = site_url('xcrud/assets/images').'/'.$row['postImg'];
-								echo '<img src='.$img.' />';
-						        echo '<h2>'.$row['postTitle'].'</h2>';
-						        echo '<span>'.$row['postDate'] = date('l, d F Y h:i').'</span>';
-														        
-						        echo '<p>'.word_limiter($row['postContent'], 25).'</p>';
-
-						        //echo anchor(BASE_URL.'news/detail/'.$row->id.'/'. url_title($row->judul),'(baca selengkapnya)') ;
+								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '<h1>'.$row['postTitle'].'</h1>');
+						        echo '<img src='.$img.' /><br/>';
+						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
+								echo '<p>'.word_limiter($row['postContent'], 25);
+								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
+								echo '</p></div>';
 						}
 					?>
-				</span>
+				</div>
+				<?php } else { ?>				
+				<div class="blogmain">
+					<?php
+						foreach ($query->result_array() as $row)
+						{
+								echo '<div class="perpos">';
+								$img = site_url('xcrud/assets/images').'/'.$row['postImg'];
+								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '<h1>'.$row['postTitle'].'</h1>');
+						        echo '<img src='.$img.' /><br/>';
+						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
+								echo '<p>'.word_limiter($row['postContent'], 25);
+								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
+								echo '</p></div>';
+						}
+					?>
+				</div>
+				<?php }; ?>
 			</div>
 		</section>
 		<footer>

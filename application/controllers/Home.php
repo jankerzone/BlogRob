@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['title']		= 'Blog \\ Robby Sanjaya \\ Weeb Geek';
-		$data['posts']		= $this->db->get('posts','5');
+		$data['query']		= $this->db->get('posts','5');
 
 		$this->load->view('Home_landing',$data);
 	}

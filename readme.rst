@@ -2,7 +2,7 @@
 Apa itu BlogRob CMS ?
 ###################
 
-BlogRob CMS adalah aplikasi Website berbasis Codeigniter yang dibuat dengan filosofi koding sesimpel mungkin. Fokus utama dari CMS ini adalah 'keep writing and make beautiful content'. 
+BlogRob CMS adalah aplikasi Website berbasis Codeigniter yang dibuat hanya sebagai pembelajaran pribadi dari penulis. CMS ini berusaha mengimplementasikan teknik-teknik SEO dan sistem yang sesimpel mungkin.
 
 *******************
 Dibalik Layar
