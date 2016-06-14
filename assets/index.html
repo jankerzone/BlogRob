@@ -1,0 +1,42 @@
+<html ng-app="scotchApp">
+	<head>
+		<title>Robby Sanjaya Muhammad \\ Blog</title>
+		<link href='favicon.ico' rel='icon' type='image/x-icon'/>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+		<script src="javascripts/script.js"></script>
+		
+		<link rel="stylesheet" href="stylesheets/styles.css">
+		<link rel="stylesheet" href="stylesheets/github-light.css">
+		<meta name="viewport" content="width=device-width">
+
+		<!-- pace loading -->
+		<script src="javascripts/pace.min.js"></script>
+  		<link rel="stylesheet" href="stylesheets/pace.css" />
+	
+	</head>
+	<body ng-controller="mainController">
+		<div class="wrapper">
+		<header>
+			<h1>Robsan {Web.Dev}</h1>
+			<h3>Hanya Ingin Tekun Beribadah</h3>
+				<a href="#try"><i class="fa fa-home"></i> Try</a><br>
+				<a href="#webkamu"><i class="fa fa-home"></i> Web Kamu Harus Responsive!</a><br>
+				<a href="#/"><i class="fa fa-home"></i> Hai Hallo (Mukadimah)</a><br>
+				
+				
+		</header>
+		<section>
+			<div id="main">
+				<span style="font-family:courier new,courier,monospace;">
+					<div ng-view></div>
+				</span>
+			</div>
+		</section>
+		<footer>
+		<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; Written by <a href="//jankerzone.com">Robby S. Muhammad</a></small></p>
+		</footer>
+		</div>
+		<script src="javascripts/scale.fix.js"></script>
+	</body>
+</html>
