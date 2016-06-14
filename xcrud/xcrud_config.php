@@ -9,7 +9,7 @@ class Xcrud_config
     
     
     // theme and language
-    public static $theme = 'default'; // can be 'default', 'bootstrap', 'minimal' or your custom. Theme of xCRUD visual presentation. For using bootstrap you need to load it on your page.
+    public static $theme = 'bootstrap'; // can be 'default', 'bootstrap', 'minimal' or your custom. Theme of xCRUD visual presentation. For using bootstrap you need to load it on your page.
     public static $language = 'en'; // sets default localization
     public static $is_rtl = false; // enables right-to-left (RTL) mode
     
@@ -46,7 +46,7 @@ class Xcrud_config
 
     
     // editor
-    public static $editor_url = 'editors/tinymce/tinymce.min.js'; // URL path to editor script, if you want to use the visual editor.
+    public static $editor_url = 'xcrud/plugins/ckeditor/ckeditor.js'; // URL path to editor script, if you want to use the visual editor.
     //public static $editor_url = 'editors/ckeditor/ckeditor.js';
     public static $editor_init_url = ''; //  URL path to your custom initialization file for editor.
     public static $force_editor = false; // Forced initialization of editor, even if the path is not specified. Check this if you're already using editor on your page.

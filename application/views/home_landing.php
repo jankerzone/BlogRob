@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title><?php echo $title ?></title>
-		<link href='favicon.ico' rel='icon' type='image/x-icon'/>
+		<link href='<?php echo site_url(); ?>assets/favicon.ico' rel='icon' type='image/x-icon'/>
 		
-		<link rel="stylesheet" href="assets/stylesheets/styles.css">
-		<script type="text/javascript" src="assets/javascripts/pace.min.js"></script>
+		<link rel="stylesheet" href="<?php echo site_url(); ?>assets/stylesheets/styles.css">
+		<script type="text/javascript" src="<?php echo site_url(); ?>assets/javascripts/pace.min.js"></script>
 		<meta name="viewport" content="width=device-width">
 	
 	</head>
@@ -13,13 +14,13 @@
 		<header>
 			<h1>ROBSAN BLOG</h1>
 			<h3>Web Geek. Love sea and mountain.</h3>
-				<a href=""><i class="fa fa-home"></i>Home</a><br>
+				<a href="<?php echo site_url(); ?>"><i class="fa fa-home"></i>Home</a><br>
 				
 				
 		</header>
 		<section>
 			<div id="main">
-			<?php if ($this->uri->segment(2) == "post") { ?>
+			<?php if ($this->uri->segment(1) == "post") { ?>
 				<div class="blogmain">
 					<?php
 						foreach ($query->result_array() as $row)
@@ -29,9 +30,7 @@
 								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '<h1>'.$row['postTitle'].'</h1>');
 						        echo '<img src='.$img.' /><br/>';
 						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
-								echo '<p>'.word_limiter($row['postContent'], 25);
-								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
-								echo '</p></div>';
+								echo '<p>'.nl2br($row['postContent']).'</p></div>';
 						}
 					?>
 				</div>
@@ -46,7 +45,7 @@
 						        echo '<img src='.$img.' /><br/>';
 						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
 								echo '<p>'.word_limiter($row['postContent'], 25);
-								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
+								echo anchor(site_url().'post/detail/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
 								echo '</p></div>';
 						}
 					?>

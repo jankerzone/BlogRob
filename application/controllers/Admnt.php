@@ -33,6 +33,7 @@ class Admnt extends CI_Controller {
 		$xcrud->table('posts');	 
 		$xcrud->change_type('postImg','image','',array('width'=>500, 'path'=>'assets/images'));
 		$xcrud->change_type('postDate', 'date');
+		$xcrud->change_type('postContent', 'texteditor');
 		$xcrud->relation('postCategory','categories', 'categoriesId', 'categoriesName');
 		$xcrud->label('postCategory','Kategori');
 

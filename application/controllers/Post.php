@@ -16,10 +16,10 @@ class Post extends CI_Controller {
 
 	public function detail($id)
 	{	
+		$query1				= $this->db->get_where('posts', array('postId'=> $id), 1)->row();
 		$data["query"]		= $this->db->get_where('posts', array('postId'=> $id), 1);
-		$data['title']		= $this->db->select('postTitle')->from('posts')->where('postId',$id);
 
-		echo $data['title'];
+		$data['title']		= 'Robsan - '.$query1->postTitle;
 
 		$this->load->view('Home_landing',$data);
 	}
