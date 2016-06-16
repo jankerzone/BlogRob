@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html manifest="blogrob.appcache">
 	<head>
 		<title><?php echo $title ?></title>
+
 		<link href='<?php echo site_url(); ?>assets/favicon.ico' rel='icon' type='image/x-icon'/>
 		
 		<link rel="stylesheet" href="<?php echo site_url(); ?>assets/stylesheets/styles.css">
