@@ -13,7 +13,7 @@
 	<body>
 		<div class="wrapper">
 		<header>
-			<h1>ROBSAN BLOG</h1>
+			<a href="<?php echo site_url() ?>"><h1>ROBSAN BLOG</h1></a>
 			<h3>Web Geek. Love sea and mountain.</h3>
 				<a href="<?php echo site_url(); ?>"><i class="fa fa-home"></i>Home</a><br>
 				
@@ -55,7 +55,7 @@
 			</div>
 		</section>
 		<footer>
-		<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; Written by <a href="//jankerzone.com">Robby S. Muhammad</a></small></p>
+		<p><small>&mdash; Written by <a href="//jankerzone.com">Robby S. Muhammad</a></small></p>
 		</footer>
 		</div>
 		

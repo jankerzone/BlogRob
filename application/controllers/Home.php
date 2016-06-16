@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 		$data['title']		= 'Blog \\ Robby Sanjaya \\ Weeb Geek';
 		$data['query']		= $this->db->get('posts','5');
 
-		$this->load->view('Home_landing',$data);
+		$this->load->view('home_landing',$data);
 	}
 
 

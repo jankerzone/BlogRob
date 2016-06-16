@@ -21,7 +21,7 @@ class Post extends CI_Controller {
 
 		$data['title']		= 'Robsan - '.$query1->postTitle;
 
-		$this->load->view('Home_landing',$data);
+		$this->load->view('home_landing',$data);
 	}
 
 }
