@@ -28,8 +28,8 @@
 						{
 								echo '<div class="perpos">';
 								$img = site_url('xcrud/assets/images').'/'.$row['postImg'];
-								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '<h1>'.$row['postTitle'].'</h1>');
-						        echo '<img src='.$img.' /><br/>';
+								echo anchor(site_url().'post/'.$row['postId'].'/'. url_title($row['postTitle']), '<h2>'.$row['postTitle'].'</h2>');
+						        echo '<img src='.$img.' alt="'.$title.'" /><br/>';
 						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
 								echo '<p>'.nl2br($row['postContent']).'</p></div>';
 						}
@@ -42,8 +42,8 @@
 						{
 								echo '<div class="perpos">';
 								$img = site_url('xcrud/assets/images').'/'.$row['postImg'];
-								echo anchor(site_url().'post/detail/'.$row['postId'].'/'. url_title($row['postTitle']), '<h1>'.$row['postTitle'].'</h1>');
-						        echo '<img src='.$img.' /><br/>';
+								echo anchor(site_url().'post/detail/'.$row['postId'].'/'. url_title($row['postTitle']), '<h2 class="title">'.$row['postTitle'].'</h2>');
+						        echo '<img src='.$img.' alt="'.$title.'"/><br/>';
 						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
 								echo '<p>'.word_limiter($row['postContent'], 25);
 								echo anchor(site_url().'post/detail/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');

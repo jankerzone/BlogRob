@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
+
 .blogmain {
   font-family: courier new, courier, monospace;
 }
@@ -14,8 +15,6 @@ footer {
 .headerblog {
   color: #000;
 }
-
-
 body {
   background-color: #fff;
   padding:50px;
