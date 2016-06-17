@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<header>
-		<h1>WebMin :: Administrasi Website</h1>
+		<h1>WebMin :: Administrasi Website :: BlogRob</h1>
 		</header>
 		<nav>
 			<?php	echo anchor('admnt/user','User Management');
@@ -14,6 +14,9 @@
 			echo ' - ';
 			echo anchor('admnt/categories','Categories Management');
 			echo ' - ';
+			echo anchor('admnt/menus','Menu Management');
+			echo ' - ';
+			echo anchor(site_url(),'Home');
 			?>
 		</nav>
 		<content>

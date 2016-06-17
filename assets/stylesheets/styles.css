@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
 
 .blogmain {
-  font-family: courier new, courier, monospace;
+  font-family: 'Roboto Slab', serif;
 }
 header {
   font-family: 'Roboto Slab', serif;
@@ -11,6 +11,11 @@ footer {
 }
 .perpos {
   padding-bottom: 25px;
+  line-height: 1.7;
+}
+.pcontent {
+  font-size: 16px;
+  margin: 0;
 }
 .headerblog {
   color: #000;

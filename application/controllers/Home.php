@@ -12,8 +12,8 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['title']		= 'Blog \\ Robby Sanjaya \\ Weeb Geek';
-		$data['query']		= $this->db->get('posts','5');
-
+		$data['query']		= $this->db->order_by('postId','desc')->get('posts','5');
+		$data['query2']		= $this->db->get('menus','10');
 		$this->load->view('home_landing',$data);
 	}
 
