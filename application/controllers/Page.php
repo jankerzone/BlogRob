@@ -11,7 +11,8 @@ class Page extends CI_Controller {
 
 	public function index()
 	{
-
+		header('Location:'.site_url());
+		exit;
 	}
 
 	public function detail($id)
