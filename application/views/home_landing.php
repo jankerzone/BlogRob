@@ -58,7 +58,7 @@
 						        	echo '';
 						        };
 
-						        echo '<div class="pcontent"><strong>'.$row->postDate = date('l, d F Y h:i').'</strong>';
+						        echo '<div class="pcontent"><strong>'.$row->postDate = date('l, d F Y').'</strong>';
 								echo nl2br($row->postContent).'</div></div>'; ?>
 								<!-- Disqus commenting -->
 								<div id="disqus_thread"></div>
@@ -84,7 +84,7 @@
 								echo '<div class="perpos">';
 							foreach ($query->result() as $row):
 								echo anchor(site_url().'page/detail/'.$row->pageId.'/'. url_title($row->pageTitle), '<h2>'.$row->pageTitle.'</h2>');
-						        echo '<div class="pcontent"><strong>'.$row->pageDate = date('l, d F Y h:i').'</strong>';
+						        echo '<div class="pcontent"><strong>'.$row->pageDate = date('l, d F Y').'</strong>';
 								echo nl2br($row->pageContent).'</div></div>';
 							endforeach;
 					} else { ?>				
@@ -101,7 +101,7 @@
 						        } else {
 						        	echo '';
 						        };
-						        echo '<strong>'.$row['postDate'] = date('l, d F Y h:i').'</strong>';
+						        echo '<strong>'.$row['postDate'] = date('l, d F Y').'</strong>';
 								echo '<p>'.word_limiter($row['postContent'], 25);
 								echo anchor(site_url().'post/detail/'.$row['postId'].'/'. url_title($row['postTitle']), '(Baca Selengkapnya)');
 								echo '</p></div>';
