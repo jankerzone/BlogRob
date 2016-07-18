@@ -7,6 +7,7 @@
 		<link href="<?=site_url(); ?>assets/stylesheets/styles.css" rel="stylesheet"/>
 		<link href="<?=current_url(); ?>" rel="canonical"/> 
 		<script type="text/javascript" src="<?=site_url(); ?>assets/javascripts/pace.min.js"></script>
+		<script src="//fast.eager.io/5ckyQ-noO6.js"></script>
 		<meta name="viewport" content="width=device-width">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
